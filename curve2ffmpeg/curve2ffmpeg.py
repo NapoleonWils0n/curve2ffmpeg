@@ -103,11 +103,12 @@ def entry():
         return list
     
     # outfile destination
+    name=(Path(argv[1]).resolve().stem)
     home = os.path.expanduser('~')
     desktop = 'Desktop'
     time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
     ext = 'txt'
-    outfile = os.path.join(home, desktop, 'infile-{}.{}'.format(time, ext))
+    outfile = os.path.join(home, desktop, '{}-{}.{}'.format(name, time, ext))
     
 #    if sys.platform.startswith('linux'):
 #    elif sys.platform.startswith('freebsd'):
@@ -136,6 +137,5 @@ def entry():
     command = commandPrelim + ' '.join(masterValues) + '":red="' + ' '.join(redValues) +'":green="' + ' '.join(greenValues) + '":blue="' + ' '.join(blueValues) + '"'
 
     # save file
-    print(Path(argv[1]).resolve().stem)
     with open(outfile, 'w') as out:
         out.write(command)
