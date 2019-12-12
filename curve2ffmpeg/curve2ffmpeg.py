@@ -36,6 +36,8 @@ def checkfile(infile):
 # argv
 argv = sys.argv[1:]
 
+result = []
+
 # main
 def main(argv):
     ''' main function
@@ -66,6 +68,7 @@ def main(argv):
             sys.exit()
         elif opt == ("-i") and len(argv) == 2:
             # -i and url or text file
+            result.append(checkfile(argv[1]))
             return result
 
         else:
@@ -78,6 +81,8 @@ def main(argv):
 
 def entry():
     main(sys.argv[1:])
+
+    infile = result[0]
 
     #make generator
     lower=0
@@ -110,7 +115,6 @@ def entry():
 #    elif sys.platform.startswith('darwin'):
 
     # checkfile
-    checkfile(argv[1])
 
     #get filename
     #file = input('Please input the absolute path to the GIMP Color Curve Preset File: ')
