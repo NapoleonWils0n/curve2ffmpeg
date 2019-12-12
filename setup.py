@@ -10,7 +10,7 @@ setup(
     maintainer='NapoleonWils0n',
     license='GPL',
     keywords='gimp',
-    packages=['pilfer'],
+    packages=['curve2ffmpeg'],
     entry_points={
         'console_scripts': [
             'curve2ffmpeg = curve2ffmpeg.curve2ffmpeg:entry',

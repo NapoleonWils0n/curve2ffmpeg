@@ -14,11 +14,11 @@ The quickest way to find to find the name of the pip command on linux is to type
 and then press the tab key and it will show you a list of the pip commands.
 
 #+BEGIN_SRC sh
-pip3 install --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
+pip install --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
 #+END_SRC
 
 *** Upgrade scripts with pip
 
 #+BEGIN_SRC sh
-pip3 install --upgrade --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
+pip install --upgrade --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
 #+END_SRC
