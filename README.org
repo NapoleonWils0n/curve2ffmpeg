@@ -5,6 +5,12 @@
 
 convert a gimp curve into ffmpeg filter code
 
+usage
+
+#+BEGIN_SRC sh
+curve2ffmpeg -i gimp-curve.txt
+#+END_SRC
+
 ** Install scripts with pip
 
 Note if you only have python 3.6 install the pip command will be pip and not pip3  

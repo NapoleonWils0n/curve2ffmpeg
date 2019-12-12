@@ -3,6 +3,7 @@
 # import
 import sys, re, os, getopt, os.path, mimetypes
 from datetime import datetime 
+from pathlib import Path
 
 # script usage
 def usage():
@@ -36,9 +37,10 @@ def checkfile(infile):
 # argv
 argv = sys.argv[1:]
 
+# store result of checkfile function
 result = []
 
-# main
+# main function
 def main(argv):
     ''' main function
     
@@ -82,6 +84,7 @@ def main(argv):
 def entry():
     main(sys.argv[1:])
 
+    # infile 
     infile = result[0]
 
     #make generator
@@ -90,6 +93,7 @@ def entry():
     length=256
     zerotoonestepped256gen = [lower + x*(upper-lower)/length for x in range(length)]
 
+    # format gimp curve for ffmpeg
     def formatForFFMPEG(values):
         serializedValues = values.split(' ')
         list = []
@@ -98,6 +102,7 @@ def entry():
                 list.append('%s/%s' % (zerotoonestepped256gen[i], serializedValues[i]))
         return list
     
+    # outfile destination
     home = os.path.expanduser('~')
     desktop = 'Desktop'
     time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
@@ -114,28 +119,23 @@ def entry():
 #        outfile = home + desktop + 'infile-' + time + ext
 #    elif sys.platform.startswith('darwin'):
 
-    # checkfile
-
-    #get filename
-    #file = input('Please input the absolute path to the GIMP Color Curve Preset File: ')
-    
-    #Open the curves file
-    #curvesfile = open(file,"r")
-    #curvesString = curvesfile.read()
-    #foundValues = re.findall(r'(?<=samples 256) [\d. ]*',curvesString)
-
+    # regex to find code in gimp curve
     foundValues = re.findall(r'(?<=samples 256) [\d. ]*',infile)
     
+    # values
     masterValues = formatForFFMPEG(foundValues[0][1:])
     redValues = formatForFFMPEG(foundValues[1][1:])
     greenValues = formatForFFMPEG(foundValues[2][1:])
     blueValues = formatForFFMPEG(foundValues[3][1:])
     alphaValues = formatForFFMPEG(foundValues[4][1:])
     
+    # ffmpeg prefix for code
     commandPrelim = 'curves=master="'
     
+    # command
     command = commandPrelim + ' '.join(masterValues) + '":red="' + ' '.join(redValues) +'":green="' + ' '.join(greenValues) + '":blue="' + ' '.join(blueValues) + '"'
 
     # save file
+    print(Path(infile).resolve().stem)
     with open(outfile, 'w') as out:
         out.write(command)
