@@ -67,7 +67,6 @@ def main(argv):
             sys.exit()
         elif opt == ("-i") and len(argv) == 2:
             # -i and url or text file
-            result.append(checkurl(argv[1]))
             return result
 
         else:
