@@ -112,7 +112,7 @@ def entry():
 #    elif sys.platform.startswith('darwin'):
 
     # checkfile
-    checkfile(argv[1]))
+    checkfile(argv[1])
 
     #get filename
     #file = input('Please input the absolute path to the GIMP Color Curve Preset File: ')
