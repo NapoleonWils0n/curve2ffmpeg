@@ -115,7 +115,7 @@ def entry():
     checkfile(argv[1]))
 
     #get filename
-    file = input('Please input the absolute path to the GIMP Color Curve Preset File: ')
+    #file = input('Please input the absolute path to the GIMP Color Curve Preset File: ')
     
     #Open the curves file
     #curvesfile = open(file,"r")
