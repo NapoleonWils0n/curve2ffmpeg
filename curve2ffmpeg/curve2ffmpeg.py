@@ -60,7 +60,6 @@ def main(argv):
         sys.exit(2) # exit
 
     for opt, arg in opts:
-        options.append(opt) # store options for later
         if opt in ("-h", "--help"):
             # -h or --help = display help
             usage()
