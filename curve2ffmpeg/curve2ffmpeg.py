@@ -136,6 +136,6 @@ def entry():
     command = commandPrelim + ' '.join(masterValues) + '":red="' + ' '.join(redValues) +'":green="' + ' '.join(greenValues) + '":blue="' + ' '.join(blueValues) + '"'
 
     # save file
-    print(Path(infile).resolve().stem)
+    print(Path(argv[1])).resolve().stem)
     with open(outfile, 'w') as out:
         out.write(command)
