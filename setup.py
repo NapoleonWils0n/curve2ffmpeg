@@ -2,20 +2,18 @@
 from distutils.core import setup
 
 setup(
-    name='pilfer',
-    version='2.0',
-    description='pilfer command line tool to record audio and video from Kodi',
-    url='https://github.com/NapoleonWils0n/pilfer',
+    name='curve2ffmpeg',
+    version='1.0',
+    description='convert gimp curve to ffmpeg code',
+    url='https://github.com/NapoleonWils0n/curve2ffmpeg',
     author='NapoleonWils0n',
     maintainer='NapoleonWils0n',
     license='GPL',
-    keywords='ffmpeg rtmpdump kodi',
+    keywords='gimp',
     packages=['pilfer'],
-    #scripts=['pilfer/pilfer', 'pilfer/pilfer-play'],
     entry_points={
         'console_scripts': [
-            'pilfer = pilfer.pilfer:entry',
-            'pilferplay = pilfer.pilferplay:entryplay',
+            'curve2ffmpeg = curve2ffmpeg.curve2ffmpeg:entry',
         ],
     }
 )
