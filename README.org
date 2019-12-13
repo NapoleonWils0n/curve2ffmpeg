@@ -19,6 +19,8 @@ The pip command may also be called pip3.6 on different linux distribution
 The quickest way to find to find the name of the pip command on linux is to type pip in the terminal  
 and then press the tab key and it will show you a list of the pip commands.
 
+*** Freebsd install
+
 #+BEGIN_SRC sh
 pip install --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
 #+END_SRC
@@ -27,6 +29,18 @@ pip install --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
 
 #+BEGIN_SRC sh
 pip install --upgrade --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
+#+END_SRC
+
+*** Linux install
+
+#+BEGIN_SRC sh
+pip3 install --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
+#+END_SRC
+
+*** Upgrade scripts with pip
+
+#+BEGIN_SRC sh
+pip3 install --upgrade --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
 #+END_SRC
 
 *** mac install
