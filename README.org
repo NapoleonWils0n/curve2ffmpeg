@@ -28,3 +28,55 @@ pip install --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
 #+BEGIN_SRC sh
 pip install --upgrade --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
 #+END_SRC
+
+*** mac install
+
+**** xcode command line tools install
+
+#+BEGIN_SRC sh
+xcode-select --install
+#+END_SRC
+
+**** Homebrew install
+
+#+BEGIN_SRC sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#+END_SRC
+
+**** Homebrew path setup
+
+edit you bashrc or zshrc and add the following code to the file
+
+#+BEGIN_SRC sh
+export PATH=/usr/local/bin:$PATH
+#+END_SRC
+
+source your ~/.bash_profile 
+
+#+BEGIN_SRC sh
+source ~/.bash_profile
+#+END_SRC
+
+or if you are using zsh source your ~/.zshrc file
+
+#+BEGIN_SRC sh
+source ~/.zshrc
+#+END_SRC
+
+**** python 3 install
+
+#+BEGIN_SRC sh
+brew install python
+#+END_SRC
+
+**** curve2ffmpeg install
+
+#+BEGIN_SRC sh
+pip install --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
+#+END_SRC
+
+**** curve2ffmpeg upgrade
+
+#+BEGIN_SRC sh
+pip install --upgrade --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
+#+END_SRC
