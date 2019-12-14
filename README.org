@@ -86,11 +86,11 @@ brew install python
 **** curve2ffmpeg install
 
 #+BEGIN_SRC sh
-pip install --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
+pip3 install --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
 #+END_SRC
 
 **** curve2ffmpeg upgrade
 
 #+BEGIN_SRC sh
-pip install --upgrade --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
+pip3 install --upgrade --user git+https://github.com/NapoleonWils0n/curve2ffmpeg.git
 #+END_SRC
