@@ -131,10 +131,10 @@ def entry():
     alphaValues = formatForFFMPEG(foundValues[4][1:])
     
     # ffmpeg prefix for code
-    commandPrelim = 'curves=master="'
+    commandPrelim = 'curves=master=\''
     
     # command
-    command = commandPrelim + ' '.join(masterValues) + '":red="' + ' '.join(redValues) +'":green="' + ' '.join(greenValues) + '":blue="' + ' '.join(blueValues) + '"'
+    command = commandPrelim + ' '.join(masterValues) + '':red='' + ' '.join(redValues) +'':green='' + ' '.join(greenValues) + '':blue='' + ' '.join(blueValues) + '\''
 
     # save file
     try:
