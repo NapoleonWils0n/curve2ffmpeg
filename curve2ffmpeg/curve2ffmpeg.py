@@ -134,7 +134,7 @@ def entry():
     commandPrelim = 'curves=master=\''
     
     # command
-    command = commandPrelim + ' '.join(masterValues) + '':red='' + ' '.join(redValues) +'':green='' + ' '.join(greenValues) + '':blue='' + ' '.join(blueValues) + '\''
+    command = commandPrelim + ' '.join(masterValues) + '\':red=\'' + ' '.join(redValues) +'\':green=\'' + ' '.join(greenValues) + '\':blue=\'' + ' '.join(blueValues) + '\''
 
     # save file
     try:
