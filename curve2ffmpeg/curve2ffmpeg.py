@@ -137,5 +137,10 @@ def entry():
     command = commandPrelim + ' '.join(masterValues) + '":red="' + ' '.join(redValues) +'":green="' + ' '.join(greenValues) + '":blue="' + ' '.join(blueValues) + '"'
 
     # save file
-    with open(outfile, 'w') as out:
-        out.write(command)
+    try:
+        with open(outfile, 'w') as out:
+            out.write(command + '\n')
+    except KeyboardInterrupt:
+        print("stopped by user")
+    except IOError:
+        print("input outpur error")
