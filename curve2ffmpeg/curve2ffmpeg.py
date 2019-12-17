@@ -104,22 +104,13 @@ def entry():
     
     # outfile destination
     name=(Path(argv[1]).resolve().stem)
-    home = os.path.expanduser('~')
-    desktop = 'Desktop'
+    #home = os.path.expanduser('~')
+    #desktop = 'Desktop'
     time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
     ext = 'txt'
-    outfile = os.path.join(home, desktop, '{}-{}.{}'.format(name, time, ext))
+    #outfile = os.path.join(home, desktop, '{}-{}.{}'.format(name, time, ext))
+    outfile = '{}-{}.{}'.format(name, time, ext)
     
-#    if sys.platform.startswith('linux'):
-#    elif sys.platform.startswith('freebsd'):
-#    elif sys.platform.startswith('win32'):
-#        home = os.path.expanduser('~').replace('\\', '/')
-#        desktop = '//Desktop//'
-#        time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-#        ext = '.txt'
-#        outfile = home + desktop + 'infile-' + time + ext
-#    elif sys.platform.startswith('darwin'):
-
     # regex to find code in gimp curve
     foundValues = re.findall(r'(?<=samples 256) [\d. ]*',infile)
     
