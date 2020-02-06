@@ -5,11 +5,17 @@
 
 convert a gimp curve into ffmpeg filter code
 
+[[https://youtu.be/s4xL0msZYuY][curve2ffmpeg youtube]]
+
 usage
 
 #+BEGIN_SRC sh
 curve2ffmpeg -i gimp-curve.txt
 #+END_SRC
+
+used with the [[https://github.com/NapoleonWils0n/ffmpeg-scripts#correct-clip][correct-clip script]]
+
+which is included with the [[https://github.com/NapoleonWils0n/ffmpeg-scripts][ffmpeg-scripts]]
 
 ** Install scripts with pip
 
